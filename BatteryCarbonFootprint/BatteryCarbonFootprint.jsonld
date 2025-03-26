@@ -1,0 +1,55 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "BatteryCarbonFootprint": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:a3e8a939-f9a2-41a1-abce-34cea3e15259#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "batteryCarbonFootprintPerFunctionalUnit": {
+                        "@id": "polygon-vocab:batteryCarbonFootprintPerFunctionalUnit",
+                        "@type": "xsd:double"
+                    },
+                    "contributionRawMaterialStage": {
+                        "@id": "polygon-vocab:contributionRawMaterialStage",
+                        "@type": "xsd:double"
+                    },
+                    "contributionProductionStage": {
+                        "@id": "polygon-vocab:contributionProductionStage",
+                        "@type": "xsd:double"
+                    },
+                    "contributionDistributionStage": {
+                        "@id": "polygon-vocab:contributionDistributionStage",
+                        "@type": "xsd:double"
+                    },
+                    "contributionEndOfLifeStage": {
+                        "@id": "polygon-vocab:contributionEndOfLifeStage",
+                        "@type": "xsd:double"
+                    },
+                    "carbonFootprintPerformanceClass": {
+                        "@id": "polygon-vocab:carbonFootprintPerformanceClass",
+                        "@type": "xsd:string"
+                    },
+                    "webLinkToCarbonFootprintStudy": {
+                        "@id": "polygon-vocab:webLinkToCarbonFootprintStudy",
+                        "@type": "xsd:string"
+                    },
+                    "generalBatteryAndManufacturerInfo": {
+                        "@id": "polygon-vocab:generalBatteryAndManufacturerInfo",
+                        "@type": "xsd:string"
+                    },
+                    "absoluteBatteryCarbonFootprint": {
+                        "@id": "polygon-vocab:absoluteBatteryCarbonFootprint",
+                        "@type": "xsd:double"
+                    }
+                },
+                "@id": "urn:uuid:6b6440d2-1536-4ab5-9911-b88485839412"
+            }
+        }
+    ]
+}

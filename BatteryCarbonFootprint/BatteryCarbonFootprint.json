@@ -1,0 +1,174 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/impactility/battery-passport-vc-schema/main/BatteryCarbonFootprint/BatteryCarbonFootprint.jsonld"
+        },
+        "version": "1.0",
+        "type": "BatteryCarbonFootprint"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Schema for the battery carbon footprint attributes of a Battery Passport as per Battery Regulation requirements.",
+    "title": "Battery Carbon Footprint",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "batteryCarbonFootprintPerFunctionalUnit": {
+                    "description": "Carbon footprint of the battery expressed per functional unit (e.g., kg CO2e/kWh).",
+                    "title": "Battery Carbon Footprint per Functional Unit",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "contributionRawMaterialStage": {
+                    "description": "Carbon footprint contribution from raw material acquisition and pre-processing stage.",
+                    "title": "Raw Material Acquisition and Pre-processing Contribution",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "contributionProductionStage": {
+                    "description": "Carbon footprint contribution from production or manufacturing stage.",
+                    "title": "Production/Manufacturing Stage Contribution",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "contributionDistributionStage": {
+                    "description": "Carbon footprint contribution from distribution stage.",
+                    "title": "Distribution Stage Contribution",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "contributionEndOfLifeStage": {
+                    "description": "Carbon footprint contribution from end-of-life and recycling stage.",
+                    "title": "End-of-Life and Recycling Stage Contribution",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "carbonFootprintPerformanceClass": {
+                    "description": "Performance classification based on carbon footprint metrics.",
+                    "title": "Carbon Footprint Performance Class",
+                    "type": "string"
+                },
+                "webLinkToCarbonFootprintStudy": {
+                    "description": "Public link to the detailed carbon footprint study or report.",
+                    "title": "Web Link to Carbon Footprint Study",
+                    "type": "string"
+                },
+                "generalBatteryAndManufacturerInfo": {
+                    "description": "General information about the battery and the manufacturer relevant to carbon footprint analysis.",
+                    "title": "General Battery and Manufacturer Information",
+                    "type": "string"
+                },
+                "absoluteBatteryCarbonFootprint": {
+                    "description": "Total carbon footprint value for the battery.",
+                    "title": "Absolute Battery Carbon Footprint",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "batteryCarbonFootprintPerFunctionalUnit",
+                "carbonFootprintPerformanceClass",
+                "absoluteBatteryCarbonFootprint"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

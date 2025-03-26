@@ -1,0 +1,39 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "BatteryMaterialsAndComposition": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:1186aa9a-14c0-47a4-8649-87afb18abe3b#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "batteryChemistry": {
+                        "@id": "polygon-vocab:batteryChemistry",
+                        "@type": "xsd:string"
+                    },
+                    "criticalRawMaterials": {
+                        "@id": "polygon-vocab:criticalRawMaterials",
+                        "@type": "xsd:string"
+                    },
+                    "cathodeAnodeElectrolyteMaterials": {
+                        "@id": "polygon-vocab:cathodeAnodeElectrolyteMaterials",
+                        "@type": "xsd:string"
+                    },
+                    "hazardousSubstances": {
+                        "@id": "polygon-vocab:hazardousSubstances",
+                        "@type": "xsd:string"
+                    },
+                    "substanceImpact": {
+                        "@id": "polygon-vocab:substanceImpact",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:f0a72b86-90ea-4890-a188-ad801a137cdf"
+            }
+        }
+    ]
+}

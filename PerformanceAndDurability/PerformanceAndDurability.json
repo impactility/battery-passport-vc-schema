@@ -1,0 +1,336 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/impactility/battery-passport-vc-schema/main/PerformanceAndDurability/PerformanceAndDurability.jsonld"
+        },
+        "version": "1.0",
+        "type": "PerformanceAndDurability"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Schema for performance and durability attributes of a Battery Passport as per Battery Regulation requirements.",
+    "title": "Performance and Durability",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "ratedCapacity": {
+                    "description": "Rated capacity of the battery.",
+                    "title": "Rated capacity",
+                    "type": "number"
+                },
+                "remainingCapacity": {
+                    "description": "Remaining capacity of the battery.",
+                    "title": "Remaining capacity",
+                    "type": "number"
+                },
+                "capacityFade": {
+                    "description": "Reduction in capacity over time.",
+                    "title": "Capacity fade",
+                    "type": "number"
+                },
+                "certifiedUsableBatteryEnergy": {
+                    "description": "Amount of certified usable battery energy.",
+                    "title": "Certified usable battery energy",
+                    "type": "number"
+                },
+                "remainingUsableBatteryEnergy": {
+                    "description": "Remaining usable battery energy in the system.",
+                    "title": "Remaining usable battery energy",
+                    "type": "number"
+                },
+                "stateOfCertifiedEnergy": {
+                    "description": "Current SOCE value.",
+                    "title": "State of certified energy (SOCE)",
+                    "type": "number"
+                },
+                "stateOfCharge": {
+                    "description": "Current SoC value.",
+                    "title": "State of Charge (SoC)",
+                    "type": "number"
+                },
+                "minimumVoltage": {
+                    "description": "Minimum voltage rating.",
+                    "title": "Minimum voltage",
+                    "type": "number"
+                },
+                "maximumVoltage": {
+                    "description": "Maximum voltage rating.",
+                    "title": "Maximum voltage",
+                    "type": "number"
+                },
+                "nominalVoltage": {
+                    "description": "Nominal voltage rating.",
+                    "title": "Nominal voltage",
+                    "type": "number"
+                },
+                "originalPowerCapability": {
+                    "description": "Initial power capability.",
+                    "title": "Original power capability",
+                    "type": "number"
+                },
+                "remainingPowerCapability": {
+                    "description": "Remaining power capability.",
+                    "title": "Remaining power capability",
+                    "type": "number"
+                },
+                "powerFade": {
+                    "description": "Decrease in power capability over time.",
+                    "title": "Power fade",
+                    "type": "number"
+                },
+                "maximumPermittedBatteryPower": {
+                    "description": "Maximum power allowed for the battery.",
+                    "title": "Maximum permitted battery power",
+                    "type": "number"
+                },
+                "nominalPowerEnergyRatio": {
+                    "description": "Ratio of power to energy.",
+                    "title": "Ratio between nominal battery power and battery energy",
+                    "type": "number"
+                },
+                "initialRoundTripEnergyEfficiency": {
+                    "description": "Efficiency at the start of life.",
+                    "title": "Initial round trip energy efficiency",
+                    "type": "number"
+                },
+                "midLifeRoundTripEfficiency": {
+                    "description": "Efficiency at mid-life.",
+                    "title": "Round trip energy efficiency at 50% of cycle life",
+                    "type": "number"
+                },
+                "remainingRoundTripEnergyEfficiency": {
+                    "description": "Efficiency remaining in current state.",
+                    "title": "Remaining round trip energy efficiency",
+                    "type": "number"
+                },
+                "energyRoundTripEfficiencyFade": {
+                    "description": "Change in energy efficiency over life.",
+                    "title": "Energy round trip efficiency fade",
+                    "type": "number"
+                },
+                "initialSelfDischargeRate": {
+                    "description": "Discharge rate at start of life.",
+                    "title": "Initial self-discharge rate",
+                    "type": "number"
+                },
+                "currentSelfDischargeRate": {
+                    "description": "Current discharge rate.",
+                    "title": "Current self-discharge rate",
+                    "type": "number"
+                },
+                "evolutionOfSelfDischargeRates": {
+                    "description": "How discharge rates changed over time.",
+                    "title": "Evolution of self-discharge rates",
+                    "type": "number"
+                },
+                "initialInternalResistance": {
+                    "description": "Resistance at start of life.",
+                    "title": "Initial internal resistance of battery cell and pack (module recommended)",
+                    "type": "number"
+                },
+                "internalResistanceIncrease": {
+                    "description": "Increase in internal resistance.",
+                    "title": "Internal resistance increase of pack (cell and module recommended)",
+                    "type": "number"
+                },
+                "expectedLifetimeYears": {
+                    "description": "Expected lifetime in years.",
+                    "title": "Expected lifetime in calendar years",
+                    "type": "number"
+                },
+                "expectedLifetimeCycles": {
+                    "description": "Expected number of full cycles.",
+                    "title": "Expected lifetime: Number of charge-discharge cycles",
+                    "type": "number"
+                },
+                "fullChargeDischargeCycles": {
+                    "description": "Total full charge/discharge cycles.",
+                    "title": "Number of full charging and discharging cycles",
+                    "type": "number"
+                },
+                "cycleLifeReferenceTest": {
+                    "description": "Test protocol reference.",
+                    "title": "Cycle-life reference test",
+                    "type": "string"
+                },
+                "cRateOfCycleLifeTest": {
+                    "description": "C-rate for life testing.",
+                    "title": "C-rate of relevant cycle-life test",
+                    "type": "number"
+                },
+                "energyThroughput": {
+                    "description": "Total energy delivered over life.",
+                    "title": "Energy throughput",
+                    "type": "number"
+                },
+                "capacityThroughput": {
+                    "description": "Total capacity delivered over life.",
+                    "title": "Capacity throughput",
+                    "type": "number"
+                },
+                "capacityThresholdForExhaustion": {
+                    "description": "Minimum capacity considered end of life.",
+                    "title": "Capacity threshold for exhaustion",
+                    "type": "number"
+                },
+                "temperatureInformation": {
+                    "description": "Thermal performance overview.",
+                    "title": "Temperature information",
+                    "type": "number"
+                },
+                "temperatureRangeIdleLower": {
+                    "description": "Minimum idle temperature.",
+                    "title": "Temperature range idle state, lower boundary",
+                    "type": "number"
+                },
+                "temperatureRangeIdleUpper": {
+                    "description": "Maximum idle temperature.",
+                    "title": "Temperature range idle state, upper boundary",
+                    "type": "number"
+                },
+                "timeInExtremeTempAbove": {
+                    "description": "Duration above upper threshold.",
+                    "title": "Time spent in extreme temperatures above boundary",
+                    "type": "number"
+                },
+                "timeInExtremeTempBelow": {
+                    "description": "Duration below lower threshold.",
+                    "title": "Time spent in extreme temperatures below boundary",
+                    "type": "number"
+                },
+                "chargingTimeAboveExtremeTemp": {
+                    "description": "Charging time above threshold.",
+                    "title": "Time spent charging during extreme temperatures above boundary",
+                    "type": "number"
+                },
+                "chargingTimeBelowExtremeTemp": {
+                    "description": "Charging time below threshold.",
+                    "title": "Time spent charging during extreme temperatures below boundary",
+                    "type": "number"
+                },
+                "deepDischargeEvents": {
+                    "description": "Count of deep discharges.",
+                    "title": "Number of deep discharge events",
+                    "type": "number"
+                },
+                "overchargeEvents": {
+                    "description": "Count of overcharges.",
+                    "title": "Number of overcharge events",
+                    "type": "number"
+                },
+                "accidentInformation": {
+                    "description": "Details on any incidents or failures.",
+                    "title": "Information on accidents",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ratedCapacity",
+                "remainingCapacity",
+                "stateOfCharge",
+                "nominalVoltage",
+                "expectedLifetimeYears",
+                "fullChargeDischargeCycles"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

@@ -1,0 +1,137 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/impactility/battery-passport-vc-schema/main/SupplyChainDueDiligence/SupplyChainDueDiligence.jsonld"
+        },
+        "version": "1.0",
+        "type": "SupplyChainDueDiligence"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Schema for supply chain due diligence attributes of a Battery Passport as per Battery Regulation requirements.",
+    "title": "Supply Chain Due Diligence",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "dueDiligenceReportInformation": {
+                    "description": "Details or summary of the due diligence report related to the battery's supply chain.",
+                    "title": "Information of Due Diligence Report",
+                    "type": "string"
+                },
+                "thirdPartyAssurances": {
+                    "description": "Information about third-party assurances under recognised schemes.",
+                    "title": "Third Party Assurances",
+                    "type": "string"
+                },
+                "supplyChainIndices": {
+                    "description": "Relevant indices that evaluate or represent the supply chain performance or risk.",
+                    "title": "Supply Chain Indices",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dueDiligenceReportInformation",
+                "thirdPartyAssurances"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

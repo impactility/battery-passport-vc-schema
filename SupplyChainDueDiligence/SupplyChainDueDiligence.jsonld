@@ -1,0 +1,31 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "SupplyChainDueDiligence": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:2b2acd5b-953f-4e67-85f1-8a4632fab2ba#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "dueDiligenceReportInformation": {
+                        "@id": "polygon-vocab:dueDiligenceReportInformation",
+                        "@type": "xsd:string"
+                    },
+                    "thirdPartyAssurances": {
+                        "@id": "polygon-vocab:thirdPartyAssurances",
+                        "@type": "xsd:string"
+                    },
+                    "supplyChainIndices": {
+                        "@id": "polygon-vocab:supplyChainIndices",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:306dd6bf-3231-4e9a-8bc2-eb37d7b4ff43"
+            }
+        }
+    ]
+}

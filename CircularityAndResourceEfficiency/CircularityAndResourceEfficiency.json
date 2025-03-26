@@ -1,0 +1,212 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/impactility/battery-passport-vc-schema/main/CircularityAndResourceEfficiency/CircularityAndResourceEfficiency.jsonld"
+        },
+        "version": "1.0",
+        "type": "CircularityAndResourceEfficiency"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Schema for circularity and resource efficiency attributes of a Battery Passport as per Battery Regulation requirements.",
+    "title": "Circularity and Resource Efficiency",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "dismantlingInformationManuals": {
+                    "description": "Manuals for removal and disassembly of the battery pack.",
+                    "title": "Dismantling Information",
+                    "type": "string"
+                },
+                "componentPartNumbers": {
+                    "description": "Part numbers for various components of the battery pack.",
+                    "title": "Part Numbers for Components",
+                    "type": "string"
+                },
+                "sparePartsSources": {
+                    "description": "Information on the sources for obtaining spare parts.",
+                    "title": "Sources of Spare Parts",
+                    "type": "string"
+                },
+                "safetyMeasures": {
+                    "description": "Details about safety measures related to battery handling.",
+                    "title": "Safety Measures",
+                    "type": "string"
+                },
+                "preConsumerRecycledNickel": {
+                    "description": "Percentage share of pre-consumer recycled nickel.",
+                    "title": "Pre-consumer Recycled Nickel Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "preConsumerRecycledCobalt": {
+                    "description": "Percentage share of pre-consumer recycled cobalt.",
+                    "title": "Pre-consumer Recycled Cobalt Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "preConsumerRecycledLithium": {
+                    "description": "Percentage share of pre-consumer recycled lithium.",
+                    "title": "Pre-consumer Recycled Lithium Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "preConsumerRecycledLead": {
+                    "description": "Percentage share of pre-consumer recycled lead.",
+                    "title": "Pre-consumer Recycled Lead Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "postConsumerRecycledNickel": {
+                    "description": "Percentage share of post-consumer recycled nickel.",
+                    "title": "Post-consumer Recycled Nickel Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "postConsumerRecycledCobalt": {
+                    "description": "Percentage share of post-consumer recycled cobalt.",
+                    "title": "Post-consumer Recycled Cobalt Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "postConsumerRecycledLithium": {
+                    "description": "Percentage share of post-consumer recycled lithium.",
+                    "title": "Post-consumer Recycled Lithium Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "postConsumerRecycledLead": {
+                    "description": "Percentage share of post-consumer recycled lead.",
+                    "title": "Post-consumer Recycled Lead Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "renewableContentShare": {
+                    "description": "Percentage of renewable content in the battery.",
+                    "title": "Renewable Content Share",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "endUserRoleWastePrevention": {
+                    "description": "Information on how end-users can help prevent waste.",
+                    "title": "End-user Role in Waste Prevention",
+                    "type": "string"
+                },
+                "endUserRoleSeparateCollection": {
+                    "description": "Information on how end-users can contribute to separate collection of waste batteries.",
+                    "title": "End-user Role in Separate Collection",
+                    "type": "string"
+                },
+                "batteryCollectionSecondLifeTreatment": {
+                    "description": "Information on collection, second life, and treatment of batteries at end of life.",
+                    "title": "Battery Collection, Second Life, and End-of-Life Treatment",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dismantlingInformationManuals",
+                "renewableContentShare",
+                "batteryCollectionSecondLifeTreatment"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

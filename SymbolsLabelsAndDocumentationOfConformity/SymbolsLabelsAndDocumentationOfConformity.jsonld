@@ -1,0 +1,47 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "SymbolsLabelsAndDocumentationOfConformity": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:bf8846ca-b708-4bea-a313-88022d04ee63#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "separateCollectionSymbol": {
+                        "@id": "polygon-vocab:separateCollectionSymbol",
+                        "@type": "xsd:string"
+                    },
+                    "symbolsForCadmiumAndLead": {
+                        "@id": "polygon-vocab:symbolsForCadmiumAndLead",
+                        "@type": "xsd:string"
+                    },
+                    "carbonFootprintLabel": {
+                        "@id": "polygon-vocab:carbonFootprintLabel",
+                        "@type": "xsd:string"
+                    },
+                    "extinguishingAgent": {
+                        "@id": "polygon-vocab:extinguishingAgent",
+                        "@type": "xsd:string"
+                    },
+                    "meaningOfLabelsAndSymbols": {
+                        "@id": "polygon-vocab:meaningOfLabelsAndSymbols",
+                        "@type": "xsd:string"
+                    },
+                    "euDeclarationOfConformity": {
+                        "@id": "polygon-vocab:euDeclarationOfConformity",
+                        "@type": "xsd:string"
+                    },
+                    "resultsOfTestReportsProvingCompliance": {
+                        "@id": "polygon-vocab:resultsOfTestReportsProvingCompliance",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:133402b7-1f3b-4b97-a629-02847d47c81d"
+            }
+        }
+    ]
+}

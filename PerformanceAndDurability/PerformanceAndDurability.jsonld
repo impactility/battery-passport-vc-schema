@@ -1,0 +1,187 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "PerformanceAndDurability": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:5b4ec77a-a218-4a5c-b325-0027a24613d1#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "ratedCapacity": {
+                        "@id": "polygon-vocab:ratedCapacity",
+                        "@type": "xsd:double"
+                    },
+                    "remainingCapacity": {
+                        "@id": "polygon-vocab:remainingCapacity",
+                        "@type": "xsd:double"
+                    },
+                    "capacityFade": {
+                        "@id": "polygon-vocab:capacityFade",
+                        "@type": "xsd:double"
+                    },
+                    "certifiedUsableBatteryEnergy": {
+                        "@id": "polygon-vocab:certifiedUsableBatteryEnergy",
+                        "@type": "xsd:double"
+                    },
+                    "remainingUsableBatteryEnergy": {
+                        "@id": "polygon-vocab:remainingUsableBatteryEnergy",
+                        "@type": "xsd:double"
+                    },
+                    "stateOfCertifiedEnergy": {
+                        "@id": "polygon-vocab:stateOfCertifiedEnergy",
+                        "@type": "xsd:double"
+                    },
+                    "stateOfCharge": {
+                        "@id": "polygon-vocab:stateOfCharge",
+                        "@type": "xsd:double"
+                    },
+                    "minimumVoltage": {
+                        "@id": "polygon-vocab:minimumVoltage",
+                        "@type": "xsd:double"
+                    },
+                    "maximumVoltage": {
+                        "@id": "polygon-vocab:maximumVoltage",
+                        "@type": "xsd:double"
+                    },
+                    "nominalVoltage": {
+                        "@id": "polygon-vocab:nominalVoltage",
+                        "@type": "xsd:double"
+                    },
+                    "originalPowerCapability": {
+                        "@id": "polygon-vocab:originalPowerCapability",
+                        "@type": "xsd:double"
+                    },
+                    "remainingPowerCapability": {
+                        "@id": "polygon-vocab:remainingPowerCapability",
+                        "@type": "xsd:double"
+                    },
+                    "powerFade": {
+                        "@id": "polygon-vocab:powerFade",
+                        "@type": "xsd:double"
+                    },
+                    "maximumPermittedBatteryPower": {
+                        "@id": "polygon-vocab:maximumPermittedBatteryPower",
+                        "@type": "xsd:double"
+                    },
+                    "nominalPowerEnergyRatio": {
+                        "@id": "polygon-vocab:nominalPowerEnergyRatio",
+                        "@type": "xsd:double"
+                    },
+                    "initialRoundTripEnergyEfficiency": {
+                        "@id": "polygon-vocab:initialRoundTripEnergyEfficiency",
+                        "@type": "xsd:double"
+                    },
+                    "midLifeRoundTripEfficiency": {
+                        "@id": "polygon-vocab:midLifeRoundTripEfficiency",
+                        "@type": "xsd:double"
+                    },
+                    "remainingRoundTripEnergyEfficiency": {
+                        "@id": "polygon-vocab:remainingRoundTripEnergyEfficiency",
+                        "@type": "xsd:double"
+                    },
+                    "energyRoundTripEfficiencyFade": {
+                        "@id": "polygon-vocab:energyRoundTripEfficiencyFade",
+                        "@type": "xsd:double"
+                    },
+                    "initialSelfDischargeRate": {
+                        "@id": "polygon-vocab:initialSelfDischargeRate",
+                        "@type": "xsd:double"
+                    },
+                    "currentSelfDischargeRate": {
+                        "@id": "polygon-vocab:currentSelfDischargeRate",
+                        "@type": "xsd:double"
+                    },
+                    "evolutionOfSelfDischargeRates": {
+                        "@id": "polygon-vocab:evolutionOfSelfDischargeRates",
+                        "@type": "xsd:double"
+                    },
+                    "initialInternalResistance": {
+                        "@id": "polygon-vocab:initialInternalResistance",
+                        "@type": "xsd:double"
+                    },
+                    "internalResistanceIncrease": {
+                        "@id": "polygon-vocab:internalResistanceIncrease",
+                        "@type": "xsd:double"
+                    },
+                    "expectedLifetimeYears": {
+                        "@id": "polygon-vocab:expectedLifetimeYears",
+                        "@type": "xsd:double"
+                    },
+                    "expectedLifetimeCycles": {
+                        "@id": "polygon-vocab:expectedLifetimeCycles",
+                        "@type": "xsd:double"
+                    },
+                    "fullChargeDischargeCycles": {
+                        "@id": "polygon-vocab:fullChargeDischargeCycles",
+                        "@type": "xsd:double"
+                    },
+                    "cycleLifeReferenceTest": {
+                        "@id": "polygon-vocab:cycleLifeReferenceTest",
+                        "@type": "xsd:string"
+                    },
+                    "cRateOfCycleLifeTest": {
+                        "@id": "polygon-vocab:cRateOfCycleLifeTest",
+                        "@type": "xsd:double"
+                    },
+                    "energyThroughput": {
+                        "@id": "polygon-vocab:energyThroughput",
+                        "@type": "xsd:double"
+                    },
+                    "capacityThroughput": {
+                        "@id": "polygon-vocab:capacityThroughput",
+                        "@type": "xsd:double"
+                    },
+                    "capacityThresholdForExhaustion": {
+                        "@id": "polygon-vocab:capacityThresholdForExhaustion",
+                        "@type": "xsd:double"
+                    },
+                    "temperatureInformation": {
+                        "@id": "polygon-vocab:temperatureInformation",
+                        "@type": "xsd:double"
+                    },
+                    "temperatureRangeIdleLower": {
+                        "@id": "polygon-vocab:temperatureRangeIdleLower",
+                        "@type": "xsd:double"
+                    },
+                    "temperatureRangeIdleUpper": {
+                        "@id": "polygon-vocab:temperatureRangeIdleUpper",
+                        "@type": "xsd:double"
+                    },
+                    "timeInExtremeTempAbove": {
+                        "@id": "polygon-vocab:timeInExtremeTempAbove",
+                        "@type": "xsd:double"
+                    },
+                    "timeInExtremeTempBelow": {
+                        "@id": "polygon-vocab:timeInExtremeTempBelow",
+                        "@type": "xsd:double"
+                    },
+                    "chargingTimeAboveExtremeTemp": {
+                        "@id": "polygon-vocab:chargingTimeAboveExtremeTemp",
+                        "@type": "xsd:double"
+                    },
+                    "chargingTimeBelowExtremeTemp": {
+                        "@id": "polygon-vocab:chargingTimeBelowExtremeTemp",
+                        "@type": "xsd:double"
+                    },
+                    "deepDischargeEvents": {
+                        "@id": "polygon-vocab:deepDischargeEvents",
+                        "@type": "xsd:double"
+                    },
+                    "overchargeEvents": {
+                        "@id": "polygon-vocab:overchargeEvents",
+                        "@type": "xsd:double"
+                    },
+                    "accidentInformation": {
+                        "@id": "polygon-vocab:accidentInformation",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:e86348af-c8e0-403a-b2da-b3a25635e8e3"
+            }
+        }
+    ]
+}

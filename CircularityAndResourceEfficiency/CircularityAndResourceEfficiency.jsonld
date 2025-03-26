@@ -1,0 +1,83 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "CircularityAndResourceEfficiency": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:92b9da93-36e1-4cc8-a7bd-ad9bf6cba4e5#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "dismantlingInformationManuals": {
+                        "@id": "polygon-vocab:dismantlingInformationManuals",
+                        "@type": "xsd:string"
+                    },
+                    "componentPartNumbers": {
+                        "@id": "polygon-vocab:componentPartNumbers",
+                        "@type": "xsd:string"
+                    },
+                    "sparePartsSources": {
+                        "@id": "polygon-vocab:sparePartsSources",
+                        "@type": "xsd:string"
+                    },
+                    "safetyMeasures": {
+                        "@id": "polygon-vocab:safetyMeasures",
+                        "@type": "xsd:string"
+                    },
+                    "preConsumerRecycledNickel": {
+                        "@id": "polygon-vocab:preConsumerRecycledNickel",
+                        "@type": "xsd:double"
+                    },
+                    "preConsumerRecycledCobalt": {
+                        "@id": "polygon-vocab:preConsumerRecycledCobalt",
+                        "@type": "xsd:double"
+                    },
+                    "preConsumerRecycledLithium": {
+                        "@id": "polygon-vocab:preConsumerRecycledLithium",
+                        "@type": "xsd:double"
+                    },
+                    "preConsumerRecycledLead": {
+                        "@id": "polygon-vocab:preConsumerRecycledLead",
+                        "@type": "xsd:double"
+                    },
+                    "postConsumerRecycledNickel": {
+                        "@id": "polygon-vocab:postConsumerRecycledNickel",
+                        "@type": "xsd:double"
+                    },
+                    "postConsumerRecycledCobalt": {
+                        "@id": "polygon-vocab:postConsumerRecycledCobalt",
+                        "@type": "xsd:double"
+                    },
+                    "postConsumerRecycledLithium": {
+                        "@id": "polygon-vocab:postConsumerRecycledLithium",
+                        "@type": "xsd:double"
+                    },
+                    "postConsumerRecycledLead": {
+                        "@id": "polygon-vocab:postConsumerRecycledLead",
+                        "@type": "xsd:double"
+                    },
+                    "renewableContentShare": {
+                        "@id": "polygon-vocab:renewableContentShare",
+                        "@type": "xsd:double"
+                    },
+                    "endUserRoleWastePrevention": {
+                        "@id": "polygon-vocab:endUserRoleWastePrevention",
+                        "@type": "xsd:string"
+                    },
+                    "endUserRoleSeparateCollection": {
+                        "@id": "polygon-vocab:endUserRoleSeparateCollection",
+                        "@type": "xsd:string"
+                    },
+                    "batteryCollectionSecondLifeTreatment": {
+                        "@id": "polygon-vocab:batteryCollectionSecondLifeTreatment",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:a3183701-aa73-4d65-82de-f65256a01990"
+            }
+        }
+    ]
+}

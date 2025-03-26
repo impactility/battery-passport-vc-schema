@@ -1,0 +1,195 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://raw.githubusercontent.com/impactility/battery-passport-vc-schema/main/IdentifiersAndProductData/IdentifiersAndProductData.jsonld"
+        },
+        "version": "1.0",
+        "type": "IdentifiersandProductData"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Schema for the Identifiers and Product Data attributes of a Battery Passport as per Battery Regulation requirements.",
+    "title": "Identifiers and Product Data",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "batteryPassportIdentifier": {
+                    "description": "Unique identifier for the battery passport.",
+                    "title": "Battery Passport Identifier",
+                    "type": "string"
+                },
+                "batteryIdentifier": {
+                    "description": "Unique identifier for the battery.",
+                    "title": "Battery Identifier",
+                    "type": "string"
+                },
+                "operatorIdentifierAndInformation": {
+                    "description": "Identifier and additional details of the operator.",
+                    "title": "Operator Identifier and Information",
+                    "type": "string"
+                },
+                "manufacturerIdentifierAndInformation": {
+                    "description": "Identifier and additional details of the manufacturer.",
+                    "title": "Manufacturer Identifier and Information",
+                    "type": "string"
+                },
+                "manufacturingPlace": {
+                    "description": "Location where the battery was manufactured.",
+                    "title": "Manufacturing Place",
+                    "type": "string"
+                },
+                "manufacturingDate": {
+                    "description": "Date when the battery was manufactured.",
+                    "title": "Manufacturing Date",
+                    "type": "string"
+                },
+                "dateOfPuttingBatteryIntoService": {
+                    "description": "Date when the battery was first put into service.",
+                    "title": "Date of Putting Battery into Service",
+                    "type": "string"
+                },
+                "warrantyPeriodOfBattery": {
+                    "description": "Warranty duration provided for the battery.",
+                    "title": "Warranty Period of Battery",
+                    "type": "string"
+                },
+                "batteryCategory": {
+                    "description": "The category to which the battery belongs.",
+                    "enum": [
+                        "EV",
+                        "LMT",
+                        "Industrial >2kWh",
+                        "Stationary >2kWh"
+                    ],
+                    "title": "Battery Category",
+                    "type": "string"
+                },
+                "batteryMass": {
+                    "description": "Mass of the battery in kilograms.",
+                    "title": "Battery Mass",
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "batteryStatus": {
+                    "description": "Current status of the battery.",
+                    "enum": [
+                        "Active",
+                        "Inactive",
+                        "Decommissioned",
+                        "Recycled"
+                    ],
+                    "title": "Battery Status",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "batteryPassportIdentifier",
+                "batteryIdentifier",
+                "manufacturerIdentifierAndInformation",
+                "manufacturingDate",
+                "batteryCategory",
+                "batteryMass",
+                "batteryStatus"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        },
+        "credentialStatus": {
+            "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+            "title": "Credential Status",
+            "properties": {
+                "id": {
+                    "description": "Id URL of the credentialStatus.",
+                    "title": "Id",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+                    "title": "Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

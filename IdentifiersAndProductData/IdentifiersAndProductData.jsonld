@@ -1,0 +1,63 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "IdentifiersandProductData": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:736e909a-6edb-430f-a3b4-a5392fcf371c#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "batteryPassportIdentifier": {
+                        "@id": "polygon-vocab:batteryPassportIdentifier",
+                        "@type": "xsd:string"
+                    },
+                    "batteryIdentifier": {
+                        "@id": "polygon-vocab:batteryIdentifier",
+                        "@type": "xsd:string"
+                    },
+                    "operatorIdentifierAndInformation": {
+                        "@id": "polygon-vocab:operatorIdentifierAndInformation",
+                        "@type": "xsd:string"
+                    },
+                    "manufacturerIdentifierAndInformation": {
+                        "@id": "polygon-vocab:manufacturerIdentifierAndInformation",
+                        "@type": "xsd:string"
+                    },
+                    "manufacturingPlace": {
+                        "@id": "polygon-vocab:manufacturingPlace",
+                        "@type": "xsd:string"
+                    },
+                    "manufacturingDate": {
+                        "@id": "polygon-vocab:manufacturingDate",
+                        "@type": "xsd:string"
+                    },
+                    "dateOfPuttingBatteryIntoService": {
+                        "@id": "polygon-vocab:dateOfPuttingBatteryIntoService",
+                        "@type": "xsd:string"
+                    },
+                    "warrantyPeriodOfBattery": {
+                        "@id": "polygon-vocab:warrantyPeriodOfBattery",
+                        "@type": "xsd:string"
+                    },
+                    "batteryCategory": {
+                        "@id": "polygon-vocab:batteryCategory",
+                        "@type": "xsd:string"
+                    },
+                    "batteryMass": {
+                        "@id": "polygon-vocab:batteryMass",
+                        "@type": "xsd:double"
+                    },
+                    "batteryStatus": {
+                        "@id": "polygon-vocab:batteryStatus",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:9e54dbee-5f86-43e8-92a4-874e5dd14127"
+            }
+        }
+    ]
+}
