@@ -59,8 +59,7 @@
                     "enum": [
                         "EV",
                         "LMT",
-                        "Industrial >2kWh",
-                        "Stationary >2kWh"
+                        "Industrial >2kWh"
                     ],
                     "title": "Battery Category",
                     "type": "string"
@@ -74,10 +73,11 @@
                 "batteryStatus": {
                     "description": "Current status of the battery.",
                     "enum": [
-                        "Active",
-                        "Inactive",
-                        "Decommissioned",
-                        "Recycled"
+                        "Original",
+                        "Repurposed",
+                        "Re-used", 
+                        "Remanufactured",
+                        "Waste"
                     ],
                     "title": "Battery Status",
                     "type": "string"
@@ -93,7 +93,10 @@
                 "batteryPassportIdentifier",
                 "batteryIdentifier",
                 "manufacturerIdentifierAndInformation",
+                "manufacturingPlace",
                 "manufacturingDate",
+                "dateOfPuttingBatteryIntoService",
+                "warrantyPeriodOfBattery",
                 "batteryCategory",
                 "batteryMass",
                 "batteryStatus"
