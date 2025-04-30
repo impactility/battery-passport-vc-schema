@@ -58,8 +58,11 @@
             },
             "required": [
                 "separateCollectionSymbol",
-                "carbonFootprintLabel",
-                "euDeclarationOfConformity"
+                "symbolsForCadmiumAndLead",
+                "extinguishingAgent",
+                "meaningOfLabelsAndSymbols",
+                "euDeclarationOfConformity",
+                "resultsOfTestReportsProvingCompliance"
             ],
             "type": "object"
         },
