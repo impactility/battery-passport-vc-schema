@@ -74,8 +74,13 @@
             },
             "required": [
                 "batteryCarbonFootprintPerFunctionalUnit",
+                "contributionRawMaterialStage",
+                "contributionProductionStage",
+                "contributionDistributionStage",
+                "contributionEndOfLifeStage",
                 "carbonFootprintPerformanceClass",
-                "absoluteBatteryCarbonFootprint"
+                "webLinkToCarbonFootprintStudy",
+                "generalBatteryAndManufacturerInfo"
             ],
             "type": "object"
         },
