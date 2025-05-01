@@ -112,7 +112,20 @@
             },
             "required": [
                 "dismantlingInformationManuals",
+                "componentPartNumbers",
+                "sparePartsSources",
+                "safetyMeasures",
+                "preConsumerRecycledNickel",
+                "preConsumerRecycledCobalt",
+                "preConsumerRecycledLithium",
+                "preConsumerRecycledLead",
+                "postConsumerRecycledNickel",
+                "postConsumerRecycledCobalt",
+                "postConsumerRecycledLithium",
+                "postConsumerRecycledLead",
                 "renewableContentShare",
+                "endUserRoleWastePrevention",
+                "endUserRoleSeparateCollection",
                 "batteryCollectionSecondLifeTreatment"
             ],
             "type": "object"
