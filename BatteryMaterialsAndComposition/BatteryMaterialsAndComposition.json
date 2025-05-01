@@ -49,7 +49,9 @@
             "required": [
                 "batteryChemistry",
                 "criticalRawMaterials",
-                "hazardousSubstances"
+                "cathodeAnodeElectrolyteMaterials",
+                "hazardousSubstances",
+                "substanceImpact"
             ],
             "type": "object"
         },

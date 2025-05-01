@@ -37,8 +37,7 @@
                 }
             },
             "required": [
-                "dueDiligenceReportInformation",
-                "thirdPartyAssurances"
+                "dueDiligenceReportInformation"
             ],
             "type": "object"
         },
